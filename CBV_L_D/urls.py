@@ -20,5 +20,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("Home/",Home.as_view(),name="Home"),
     path("school_list/",school_list.as_view(),name="school_list"),
-    re_path('(?P<pk>\d+)/',school_details.as_view(),name="school_details"),
+    path("SchoolCreate/",SchoolCreate.as_view(),name="SchoolCreate"),
+    re_path("^Update/(?P<pk>\d+)/",SchoolUpdate.as_view(),name="SchoolUpdate"),
+    re_path("^Delete/(?P<pk>\d+)/",SchoolDelete.as_view(),name="SchoolDelete"),
+    re_path('(?P<pk>\d+)/',school_details.as_view(),name="school_detail"),
 ]

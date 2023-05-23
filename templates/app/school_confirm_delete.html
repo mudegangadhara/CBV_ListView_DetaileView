@@ -1,0 +1,21 @@
+{% extends 'app/dummy.html' %}
+
+
+{% block title %}
+    <title>Delete View</title>
+{% endblock %}
+
+{% block body_block %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Delete The Data</h1>
+    <input type="submit" value="Yes Sure-Delete" class="btn btn-primary"><br><br>
+
+
+
+    </form>
+    <a href="{% url 'school_list' %}" class="btn btn-success">No, Go-Back_List</a>
+    <a href="{% url 'school_detail' pk=Schoolobjects.pk %}" class="btn btn-danger">no,go-back_detail</a>
+
+{% endblock  %}

@@ -26,4 +26,6 @@
     <h6>age of student is : {{i.Sage}}</h6>
 
 {% endfor %}
+<a href="{% url 'SchoolUpdate' pk=sclobject.pk %}" class="btn btn-danger">Update</a>
+<a href="{% url 'SchoolDelete' pk=sclobject.pk %}" class="btn btn-primary">Delete</a>
 {% endblock  %}
